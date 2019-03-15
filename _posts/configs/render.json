@@ -1,0 +1,23 @@
+{
+    "inject_template":"",
+    "third_party_comments_script":"",
+    "dashboard_time":1545547408845,
+    "debug_template":true,
+    "comments_type":"tree",
+    "theme":"",
+    "gravatar":false,
+    "routes":[
+        {
+            "route_root":"",
+            "route_url":"apps\/album",
+            "route_theme":"album\/caimage"
+        },
+        {
+            "route_root":"",
+            "route_url":"apps\/morepage",
+            "route_theme":""
+        }
+    ],
+    "auto_reload":false,
+    "hide_comments":false
+}

@@ -1,0 +1,38 @@
+html
+	head
+		+h.headers
+		block title
+			title= site.title
+		+h.load('font', 'pure', 'markdown', '/template/style.scss')
+
+	body: .body_wrap
+		#header.cf
+			+pure
+				+pure(0.9, 0.5)
+					.logo: a(href="/")= site.title
+				+pure(0.1, 0.5)
+					.site_nav_wrap= site.get_nav(toggle_menu=True)
+
+		#main.cf
+			.pure-g
+				.pure-u-1.pure-u-md-17-24: .left_side
+					block content
+
+				.pure-u-1.pure-u-md-7-24: .right_side: .sider
+					.aside
+						h3
+							i.fa.fa-magic
+							span.label Recent Articles
+						ul.recent_posts: for post in posts.recent6: li
+							a(href=post.url, title=post.title)= post.title
+					if site.tags: .aside
+						h3
+							i.fa.fa-tags
+							span.label Tags
+						div
+							for tag_name, tag_count in site.tags
+								a(href="/tag/{{tag_name}}") {{tag_name}}  
+		footer#footer
+			.copyright
+				span 2018 © Huazhong Agricultural University !
+				a(href="http://www.hzau.edu.cn/", target="_blank")

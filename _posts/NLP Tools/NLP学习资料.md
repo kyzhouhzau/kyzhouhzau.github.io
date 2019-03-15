@@ -1,0 +1,301 @@
+---
+date: 2019-02-21
+tags: NLP
+status: public
+title: 学习自然语言处理（NLP）的学习方法和资料合集
+---
+推荐：学习自然语言处理（NLP）的学习方法和资料合集
+
+yuquanle  机器学习初学者  今天
+本文作者：乐雨泉，优秀的nlp学习者，在各类技术论坛和网站署名yuquanle，这篇文章是他作为一名自然语言初学者，在nlp里摸爬滚打了许久的一些心得。
+
+学习nlp方法大致可以分为二种。
+
+第一种，在实践中学习，找一个特定的任务，譬如文本分类、情感分析等。然后以做好任务为导向的去挖掘和这一个任务相关的知识点。
+
+由于没有系统的学习，肯定会遇到各种各样的拦路虎问题，当遇到不懂的概念时，利用百度/谷歌查阅相关资料去理解学习这个概念，若是概念难懂，就多看不同的人对这些概念的理解，有的时候有些人能深入浅出的讲解一些很不错的资料，个人觉得这种有目的性的实践学习方式学来的东西更加印象深刻。
+
+这样也在潜移默化中锻炼了个人能力（独立查找资料/文献是一种极其重要的能力），又能达成某些目的。这样过了一段时间之后，好像懂很多东西了，但是好像又有很多方面不了解，其实这就是在某个点有点深度了，但是广度还不够。
+
+如果此时有大把闲置的时间，就可以去刷刷那些不错的系统性课程，刷课的时候会发现很多概念理解起来轻松多了，或者说似曾相识（理解的知识点又得到了复习并再次确认自己的理解了的知识点和这些老师讲的是否一致）。
+
+
+第二种，就是一上来就是刷课刷书，把理论什么的都梳理一遍，然后根据课程把课后作业都敲一遍并且理解。
+
+这样系统的学习虽然会花上很长的时间，但是也会让你对知识体系有个全面的认识，之后你再进去某个小点（比如文本分类等）的深入探索，会发现很多东西都理解学习过。
+
+其实你已经有了知识的广度，但是对某个点的知识深度还欠缺，此时就按需深挖即可，当然，这个过程肯定也不轻松。
+
+其实这二种学习方法我觉得都挺不错，根据自身具体情况具体分析，交叉使用，效果应该更佳。现在回过头来看，我之前的学习方法更像第一种。
+
+最近想从头开始学一些基础知识，以查漏补缺，所以收集了一大波不错的资料，作为新年大礼包送给初学者们，往下看，你想要的都在后面，记得看完免费的赞来一个哟！！！
+
+编程语言
+初学者推荐python，安装方法可以选择纯python安装也可以选择Anaconda方式安装。IDE推荐pycharm。
+
+此外，强烈推荐初学者使用jupyter来学习代码，感觉真的超级赞。
+
+对于新手应该如何学python，个人觉得最重要的是写，排除那种特别优秀的人，相信大部分人都可以归入到我亦无他，唯手熟尔。
+
+因此前期的代码量是必不可少的，即使在不熟悉的语法情况下对着敲也不失为一种不错的方法，总而言之，要敲，要实践，从而达到手熟。
+
+有人会问，那我一开始敲什么呢？ 初学者建议把python基本语法敲一遍，可以配合jupyter，这样可以很方便的敲完一个方法就能实时运行展示效果。然后敲一些基础的python包的基本用法，譬如最基本的numpy、pandas、matlibplot三剑客。
+
+个人建议一开始没必要对里面的每个方法都去深究，这样做会很费时而且可能正反馈也不大，把简单的基本的用法敲几遍熟悉，在这个过程中，要慢慢锻炼一种能力：碰到问题能够独立通过百度/谷歌解决。以后会发现这种能力尤为重要。
+
+自然语言处理初学者首先要了解熟悉nlp领域的基本术语、任务定义以及一些基本算法，前期可以结合一些不错的工具实践，比如经典的jieba、hanlp、snownlp、stanfordcorenlp、spaCy、pyltp、nltk、textblob、gensim、scikit-learn等，以及最近的pkuseg、flair等等。通过这些熟悉比如任务的输入输出、评价指标以及应用场景等等。
+
+书籍推荐
+个人觉得从头到尾的看书对于初学者来说不太友好，但是必备的工具书放在手边经常查阅是必不可少的。比如周志华老师的西瓜书《机器学习》、李航的《统计学习方法》、宗成庆的《统计自然语言处理》以及花书《Deep Learning》等等。另外一些比较有意思的书譬如《数学之美》也可以读读，通俗易懂的语言会让你对这个领域产生兴趣，最后推荐一本培养机器学习思维的书《Machine Learning Yearning》。
+就此打住，对于初学者这几本工具书我觉得够了。不想买书的童鞋也没关系，可以直接看pdf电子档，网上资料很多，找不到的童鞋也没关系，请在以下链接自取。
+
+ 链接：
+ https://pan.baidu.com/s/1k2NNIdmayS0K7K68wfThgQ 
+ 提取码：tfhl 
+
+此外，当你们发现手头的资料不够的时候，相信你已经拥有了自我搜索寻找更好更进阶资料的能力了，所以我这里也不多说了，授人以鱼不如授人以渔。
+
+搜索资料一般最简单的就是百度、谷歌，相同的关键词在这二种搜索引擎上得到的结果可能也大相径庭，所以在不能找到满意的结果时不妨二者都尝试下。另一方面，一些开放了github的项目也可以去github上提问，当然github也是搜代码的好平台。初学者可以慢慢尝试，总结经验，以便培养自己的解决问题的能力。
+
+当你能力再提升到一个阶段时，可能现阶段的东西都不能满足你，此时，可以锻炼直接看官方API了，第一手资源当然是最好的选择，一些前沿的东西可以直接看相关paper。关于如何寻找相关文献我后面会给出自己的一些经验。
+
+视频课程
+时间充裕的朋友还是推荐有选择性的看一下不错的课程，这里收集了一大波优秀的免费课程，请收下这个大礼包。
+
+吴恩达的机器学习：https://0x9.me/m8J6G
+这是机器学习的经典视频。
+
+网易云课堂有吴恩达的名为深度学习工程师免费微专业
+：https://0x9.me/bnMf9
+一共包括四周课程，分别为：
+1. 神经网络和深度学习
+2. 改善深层神经网络:超参数调试、正则化以及优化
+3. 结构化机器学习项目
+4. 卷积神经网络
+5. 序列模型
+
+李宏毅老师的系列课程：
+http://speech.ee.ntu.edu.tw/~tlkagk/courses.html
+没梯子可以在B站看：https://0x9.me/zd052
+
+CS224n: http://web.stanford.edu/class/cs224n/
+斯坦福的深度学习的自然语言处理，包括视频、PPT讲义。
+
+Oxford Course on Deep Learning for Natural Language Processing：
+https://machinelearningmastery.com/oxford-course-deep-learning-natural-language-processing/
+
+林轩田老师的课程，机器学习基石和机器学习技法。
+主页：https://www.csie.ntu.edu.tw/~htlin/mooc/
+主页可以找到课程资料以及视频链接。没梯子也可以B站看。
+1.机器学习基石：https://0x9.me/t6rIR
+2.机器学习技法：https://0x9.me/OcZep
+教程习题解答：https://github.com/Doraemonzzz/Learning-from-data
+
+我相信以上大家肯定都或多或少听过，应该都属于经典教程了，所以有大量时间的初学者可以花时间钻研学习，看不懂的地方多看几篇，再看不懂就网上查阅各种资料包括别人的学习笔记继续研究，相信经历过之后肯定是豁然开朗并且功力大为长进。
+
+推荐黄海广博士的笔记，作为参考：
+
+吴恩达机器学习笔记：
+https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes
+吴恩达深度学习课程笔记：https://github.com/fengdu78/deeplearning_ai_books
+
+学术论文
+当知识贮备到一定量的时候，自身的能力也提升上来了，此时就可以直接看第一手资源了：官方API和论文。
+
+关于论文，如果是研究生的话基本上都绕不过去，所以问题来了，我们应该看什么样的文章？答案自然是看高质量的文章啦~ 这不是废话么，那高质量的文章应该如何去找呢？
+
+国内有一个关于计算机的排名叫
+CCF推荐排名:https://www.ccf.org.cn/xspj/gyml/
+
+里面保罗了计算机各大领域的会议期刊排名，比如计算机体系结构、计算机网络、人工智能、数据挖掘等等。CCF推荐排名把会议和期刊被分成A,B,C三类。但是这个国内人搞的，国外基本不看这个。不过被推到这里的会议/期刊质量都还算不错。
+
+国外把ACL、EMNLP、NAACL、COLING被称为NLP四大顶会，其中唯独ACL在CCF里面是A类，可见在ACL中一篇文章是很难的（ps：这也是作为nlper的我以后的目标之一）。ACL学会在北美和欧洲召开分年会，分别称为NAACL和EACL。ACL学会下设多个特殊兴趣小组，其中比较有名的诸如SIGDAT、SIGNLL等。而EMNLP则是SIGDAT组织的国际会议。比较有名的还有SIGNLL组织的CoNLL。
+
+NLP/CL也有自己的旗舰学术期刊Computational Linguistics和ACL创办的期刊TACL，虽然TACL目前没有被推入CCF，但是TACL真的超级难感觉。
+
+作为交叉学科，也有很多相关领域值得关注。主要包括：信息检索和数据挖掘领域：SIGIR、WWW、KDD、WSDM等和人工智能领域: AAAI、IJCAI等。
+
+对于期刊和会议，建议大家直接看会议文章，因为会议文章都比较实时，而且大多数人会把直接的最新研究发到会议上，中了会议之后再去做进一步完善补充扩展成期刊。所以对于目的为发文章的研究生，首先看会议文章即可，当发现此文值得深入研究的时候，可以去尝试寻找期刊版（当然也不一定有）。
+
+那么应该如何下载文章呢？
+
+对于会议文章直接去主页搜索接收文章列表，很多不会提供下载链接，那就把需要的文章名复制粘贴到百度学术/谷歌学术里面去搜索下载。
+
+深度学习框架
+深度学习如此火热，当然在自然语言处理也激起了不小的浪花，比如从2013年的word2vec到现在的BERT，都是很不错的工作，初学者肯定也是要接触深度学习框架的，那面对众多的框架应该如何选择呢？
+
+深度学习框架很多，包括TensorFlow、Keras、Caffe、CNTK、PyTorch、MXnet、DeepLearning4J、Theano、PaddlePaddle、Chainer、Lasagne等等。推荐初学者keras，Keras是一个高层神经网络API，它由纯Python编写而成，并基于Tensorflow、Theano以及CNTK作为后端。
+
+当然，写工程更多的是用Tensorflow，搞学术的人可能更喜好Pytorch。所以这里也收集了一些不错的资料。
+
+Keras
+
+官方文档：
+https://github.com/keras-team/keras
+中文文档：
+https://keras-cn.readthedocs.io/en/latest/
+例子：
+https://github.com/keras-team/keras/tree/master/examples
+
+Tensorflow
+
+官方文档：
+https://github.com/tensorflow/tensorflow
+中文文档：
+http://www.tensorfly.cn/
+中文教程：
+https://github.com/CreatCodeBuild/TensorFlow-and-DeepLearning-Tutorial
+例子：
+https://github.com/aymericdamien/TensorFlow-Examples
+
+Pytorch
+
+官方文档：
+https://github.com/pytorch/pytorch
+中文文档：
+https://pytorch.apachecn.org/#/
+例子：
+https://github.com/yunjey/pytorch-tutorial
+超全资源：
+https://github.com/bharathgs/Awesome-pytorch-list
+
+项目实践
+如果组里面有相关项目，好好做，跟着师兄师姐，能学到不少东西。
+如果有大厂的实习机会，争取去，工业界能学到更多与以后工作息息相关的东西。
+
+如果没有实习机会，也没有项目做，那可以关注下比赛，找一下相关的比赛，下载数据集，排行榜可以实时看到你写的模型的性能。初学者可以去github找相关的开源模型，先跑起来，再想着如何去改进，以此锻炼自己的工程能力。
+
+之前有人私信问我，这些比赛的信息去哪里找？
+
+一般一些比赛在放出来之前，会做一些推广，在一些公众号或者群里能看到软文。但是这些信息不一定能被我们及时看到，但是比赛一般都会放到平台上，最出名的平台之一当属kaggle，其它的还有天池、CCF、AI Challenger、DF、DC、biendata等等。
+
+据我所知，自然语言处理相关的比赛一般可分为二类，一类是学术型的评测，一类是工业界举办的比赛。
+
+很多企业会举办比赛，吸引很多人来参与，特别是一些大企业，宣传工作会做得很到位，大家稍微注意下，一般都能听到风声。
+
+学术型的评测也很多，比如NAACL的评测SemEval( International Workshop on Semantic Evaluation），这种伴随着会议的评测，一般每年都会开放很多任务，在规定时间内报名参加，得到好的名次还可以写一篇评测论文。出名的比如CIKM、SIGKDD等等，大家可以关注。国内的话像NLPCC、CCKS等也会开放评测。
+
+关乎代码，最好的方法就是不断的练习，对于自然语言处理也不例外，在学习理论的同时，也要积累代码量。关于这一块，初学者可以选定研究的小方向之后，尝试自己写代码/或者参考网上代码去跑一些baseline的demo。
+
+拿文本分类来举例，最简单的是one-hot，然后是tf-idf、lda、lsa，到word2vec、glove、fasttext，再到textrnn、textcnn、han等，最后到现在的elmo、bert，这一套过来，关于文本分类这一个自然语言处理下的小方向的流行模型我相信基本上都会清晰很多。
+
+ps：这里说的虽然简单，但是要这样过一遍，就是参考优秀的代码跑通相信对于大多数人来说也需要花费很多时间，但相信这也是锻炼成为一位AI算法工程师的必经之路。
+
+重磅干货
+不要愁找不到免费的优质资料，新年大礼包打包送给您。
+
+100 Days Of ML Code（机器学习100天）:
+地址：
+https://github.com/Avik-Jain/100-Days-Of-ML-Code
+中文版地址：
+https://github.com/Avik-Jain/100-Days-of-ML-Code-Chinese-Version
+
+Keras之父的Deep Learning with Python:
+地址：
+https://github.com/fchollet/deep-learning-with-python-notebooks
+中文版链接：
+https://pan.baidu.com/s/1Fsc1gg8D8E39XhQZ_nRn2Q
+提取码：indz
+
+李沐的动手学深度学习 ：
+链接：
+https://pan.baidu.com/s/1YNkuTycWWnKy7APbCN9YeA
+提取码：vy7w
+B站视频链接：http://h5ip.cn/NriF
+本书代码库：
+https://github.com/diveintodeeplearning/d2l-zh 
+
+Python实现统计学习方法一书中所有算法：
+代码库地址：
+https://github.com/WenDesi/lihang_book_algorithm
+
+Reddit超高赞免费NLP课程：
+地址：
+https://github.com/yandexdataschool/nlp_course
+
+一个提供了很多机器学习问题的当前最优结果的项目：
+地址：
+https://github.com//RedditSota/state-of-the-art-result-for-machine-learning-problems
+
+跟踪NLP当前最新技术进度的项目：
+地址：
+https://github.com/yuquanle/NLP-progress
+
+川大毕业极客创建项目深度学习500问：
+地址：
+https://github.com/yuquanle/DeepLearning-500-questions
+
+汇集了40个关于中文NLP词库项目：
+地址：
+https://github.com/yuquanle/funNLP
+
+机器学习/深度学习/自然语言处理/C/C++/Python/面试笔记:
+地址：
+https://github.com/yuquanle/Algorithm_Interview_Notes-Chinese
+
+清华大学NLP组github，很多paper的整理：
+https://github.com/thunlp/
+
+深度学习实践教程，Pytroch实现机器学习/深度学习算法：
+地址：
+https://github.com/GokuMohandas/practicalAI
+
+AI Challenger 2018 baseline方法：
+地址：
+https://github.com/AIChallenger/AI_Challenger_2018
+比赛主页：https://challenger.ai/
+
+一份很全面的机器学习算法资料，包括视频、代码、Demo:
+地址：
+https://github.com/trekhleb/homemade-machine-learning
+
+模式识别与机器学习(PRML)
+下载主页：
+https://www.microsoft.com/en-us/research/people/cmbishop/#!prml-book
+本书代码：http://prml.github.io/
+
+200多个最好的机器学习、NLP和Python相关教程：
+地址：http://suo.im/5fTvIN
+
+机器学习小抄(像背单词一样理解机器学习)：
+地址：
+https://pan.baidu.com/s/1eQpA1DknCJCgjMS8QMLOJQ 
+提取码：b79u 
+
+知乎“看山杯” 夺冠记:
+地址：http://suo.im/58piBA
+
+"达观杯"比赛资料分享：
+地址：
+达观杯文本智能处理挑战赛冠军解决方案
+“达观杯”文本智能处理挑战赛，季军带你飞
+ 
+The End
+作者的公众号
+长按二维码关注~
+AI小白入门
+ID: StudyForAI
+学习AI学习ai(爱)
+期待与您的相遇~
+请关注和分享↓↓↓ 
+
+机器学习初学者
+QQ群：554839127
+（注意：本站有6个qq群，加入过任何一个的不需要再加）
+往期精彩回顾
+良心推荐：机器学习入门资料汇总及学习建议（2018版）
+黄海广博士的github镜像下载（机器学习及深度学习资源）
+吴恩达老师的机器学习和深度学习课程笔记打印版
+机器学习小抄-（像背托福单词一样理解机器学习）
+首发：深度学习入门宝典-《python深度学习》原文代码中文注释版及电子书
+科研工作者的神器-zotero论文管理工具
+机器学习的数学基础
+机器学习必备宝典-《统计学习方法》的python代码实现、电子书及课件
+吐血推荐收藏的学位论文排版教程（完整版）
+机器学习入门的百科全书-2018年“机器学习初学者”公众号文章汇总
+
+
+
+文章转载自公众号
+AI小白入门 AI小白入门  
+阅读 391 好看

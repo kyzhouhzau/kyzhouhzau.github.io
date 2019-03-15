@@ -1,0 +1,93 @@
+---
+date: 2018-12-02 19:49
+tags: Tensorflow
+status: public
+title: Tensorflow-API
+---
+
+# 1、tf.data.Dataset.from_tensor_slices()
+<code>
+dataset = tf.data.Dataset.from_tensor_slices(np.array([1.0,2.0,3.0]))
+iterator = dataset.make_one_shot_interator()
+one_element = iterator.get_nex()
+</code>
+
+
+### 1.1 tuple 创建 dataset
+<code>dataset = tf.data.Dataset.from_tensor_slices(
+    (
+        np.array([1,2,3,4,5]),
+        np.random.uniform(size=(5,2))
+    )
+)</code>
+
+
+### 1.2 dataset转换map、batch、shuffle、repeat
++ map：
+
+<code>dataset = tf.data.Dataset.from_tensor_slices(np.array([1,2,3,4,5]))
+dataset = dataset.map(lambda x:x+1) #2,3,4,5,6</code>
+
++ batch,将dataset中的元素组成了大小为32的batch
+<code>dataset = dataset.batch(32)</code>
+
++ shuffle ，打乱dataset中的元素，有一个参数buffsize，表示打乱时使用的buffer的大小
+<code>dataset = dataset.shuffle(buffer_size=10000)</code>
+
++ repeat 将整个序列重复多少次
+<code>dataset = dataset.repeat(10)</code>
+
+# 2、tf.data API 构建高性能Tensorflow输入管道（来自：Google Tendorflow）
++ Tensorflow 输入管道本质上是一个ETL过程
++ tf.data API 上下文常见性能优化
++ 设计高性能Tensorflow的最佳时间
+### 输入数据管道结构
+* 提取：从持久化数据库中读取数据
+* 转换：使用cpu对数据解析和预处理。
+* 加载： 将变换后的数据加载到执行机器学习的加速其中（GPU,TPU）
+
+这种结构，充分利用了CPU,该种结构利于性能优化。
+
+使用tf.estimator.Estimator API 提取，和转换将在input_fn中捕获。
+例：
+```
+def parse_fn(example):
+  "Parse TFExample records and perform simple data augmentation."
+  example_fmt = {
+    "image": tf.FixedLengthFeature((), tf.string, ""),
+    "label": tf.FixedLengthFeature((), tf.int64, -1)
+  }
+  parsed = tf.parse_single_example(example, example_fmt)
+  image = tf.image.decode_image(parsed["image"])
+  image = _augment_helper(image)  # augments image using slice, reshape, resize_bilinear
+  return image, parsed["label"]
+
+def input_fn():
+  files = tf.data.Dataset.list_files("/path/to/dataset/train-*.tfrecord")
+  dataset = files.interleave(tf.data.TFRecordDataset)#交叉读取数据
+  dataset = dataset.shuffle(buffer_size=FLAGS.shuffle_buffer_size)
+  dataset = dataset.map(map_func=parse_fn)#数据预处理
+  dataset = dataset.batch(batch_size=FLAGS.batch_size)
+  return dataset
+```
+### 性能优化
+首先，我们定义要使用的模型种类。主智能体会拥有全局网络，且每个本地工作器智能体在自己的进程中都会拥有此网络的副本。我们会使用模型子类化对模型进行实例化。虽然模型子类化会使进程更冗长，但却为我们提供了最大的灵活性。
+Pipelining
+要执行训练步骤，您必须首先提取并转换训练数据，然后将其提供给在加速器上运行的模型。然而，在一个简单的同步执行中，当 CPU 正在准备数据时，加速器则处于空闲状态。相反，当加速器正在训练模型时，CPU 则处于空闲状态。因此，训练步骤时间是 CPU 预处理时间和加速器训练时间的总和。
+
+Pipelining 将一个训练步骤的预处理和模型执行重叠。当加速器正在执行训练步骤 N 时，CPU 正在准备步骤 N + 1 的数据。这样做的目的是可以将步骤时间缩短到极致，包含训练以及提取和转换数据所需时间（而不是总和）。
+
+如果没有使用 pipelining，则 CPU 和 GPU / TPU 在大部分时间处于闲置状态：
+
+![](./_image/2019-01-11-13-24-04.jpg)
+而使用 pipelining 技术后，空闲时间显著减少：
+
+
+![](./_image/2019-01-11-13-24-20.jpg)
+注：Dataset自身是一系列由张量构成的组元，并包含缓存（cache）、交错读取（interleave）、预读取（prefetch）、洗牌（shuffle）、投影（map）、重复（repeat）等数据预处理方法
+
+
+
+
+
+

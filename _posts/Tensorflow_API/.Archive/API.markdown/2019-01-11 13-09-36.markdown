@@ -1,0 +1,60 @@
+---
+date: 2018-12-02 19:49
+tags: Tensorflow
+status: public
+title: Tensorflow-API
+---
+
+# 1、tf.data.Dataset.from_tensor_slices()
+<code>
+dataset = tf.data.Dataset.from_tensor_slices(np.array([1.0,2.0,3.0]))
+iterator = dataset.make_one_shot_interator()
+one_element = iterator.get_nex()
+</code>
+
+
+### 1.1 tuple 创建 dataset
+<code>dataset = tf.data.Dataset.from_tensor_slices(
+    (
+        np.array([1,2,3,4,5]),
+        np.random.uniform(size=(5,2))
+    )
+)</code>
+
+
+### 1.2 dataset转换map、batch、shuffle、repeat
++ map：
+
+<code>dataset = tf.data.Dataset.from_tensor_slices(np.array([1,2,3,4,5]))
+dataset = dataset.map(lambda x:x+1) #2,3,4,5,6</code>
+
++ batch,将dataset中的元素组成了大小为32的batch
+<code>dataset = dataset.batch(32)</code>
+
++ shuffle ，打乱dataset中的元素，有一个参数buffsize，表示打乱时使用的buffer的大小
+<code>dataset = dataset.shuffle(buffer_size=10000)</code>
+
++ repeat 将整个序列重复多少次
+<code>dataset = dataset.repeat(10)</code>
+
+# 2、tf.data API 构建高性能Tensorflow输入管道（来自：Google Tendorflow）
++ Tensorflow 输入管道本质上是一个ETL过程
++ tf.data API 上下文常见性能优化
++ 设计高性能Tensorflow的最佳时间
+### 输入数据管道结构
+* 提取：从持久化数据库中读取数据
+* 转换：使用cpu对数据解析和预处理。
+* 加载： 将变换后的数据加载到执行机器学习的加速其中（GPU,TPU）
+
+这种结构，充分利用了CPU,该种结构利于性能优化。
+
+使用tf.estimator
+
+
+
+
+
+
+
+
+

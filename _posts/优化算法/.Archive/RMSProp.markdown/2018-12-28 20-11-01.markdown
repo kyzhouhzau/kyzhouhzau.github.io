@@ -1,0 +1,17 @@
+---
+date: 2018-12-03 16:22
+status: public
+title: RMSProp
+---
+
+# Rmsprop
+1、Adagrad的缺点
+当初始学习率不能使得模型很快找到较优解，随着梯度的不断减小，模型将很难再找到最优解。
+2、PMSProp算法
+不同于Adagrad里状态$s_t$是截止到时间步t所有小批量随机梯度$g_t$按元素平方和，RMSProp将这些元素按元素平方做指数加权移动平均。即给定超参数$0< \gamma <1$，RMSProp在时间步$t>0$计算：
+$s_t \leftarrow \gamma s_{t-1}+(1-\gamma)g_t ⊙ g_t$
+$x_t \leftarrow x_{t-1}- \frac{\eta}{\sqrt{s_t+\varepsilon}}⊙g_t$
+
+3、超参数
+$0\leq \gamma <1$ 倾向选大值
+$\varepsilon$   倾向选小值$1e^{-6}$

@@ -1,0 +1,12 @@
+extends base
+block content
+	entries = data.get_data(type='post', limit=300, sort='desc', pager_name='archive').group('date:year', reverse=True)
+	ul.archive
+		for year, posts in entries
+			li.list_years= year
+			ul.listing
+				for post in posts: li.listing_item
+					span.date= post.date('%Y-%m-%d')
+					a(href=post.url, title=post.title)= post.title
+
+	+h.paginator()

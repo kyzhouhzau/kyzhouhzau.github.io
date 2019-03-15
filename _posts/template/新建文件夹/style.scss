@@ -1,0 +1,248 @@
+body {
+    background: #fcfcfa;
+    color: #454034;
+    font: 14px/1.5 'Droid Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	-webkit-text-size-adjust:none;
+}
+
+.left_side, .right_side{
+	font-family: 'Droid Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+
+.clear{
+	clear: both;
+	height: 0;
+}
+
+a, .markdown a {
+    text-decoration: none;
+    color: #d93f21;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+a:hover, .markdown a:hover{
+    color: #ee6e2f;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+
+.body_wrap {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 5%;
+}
+
+
+#header {
+    padding: 20px 0 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+	margin-bottom: 50px;
+
+    .logo {
+        float: left;
+        font-size: 2em;
+        font-weight: bold;
+        font-family: 'Droid Sans', 'Helvetica Neue', Arial, Helvetica, "Microsoft yahei", sans-serif;
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+    }
+
+    .site_nav_wrap{
+        font-size: 14px;
+
+		.bitcron_nav{
+			border-bottom: none;
+		}
+
+		a {
+			color: #999282;
+			&:hover, &.selected {
+				color: #333;
+			}
+		}
+    }
+}
+
+#main {
+    margin: 25px 0;
+
+}
+
+// post
+.post_in_list {
+    margin-bottom: 30px;
+	padding-bottom: 30px;
+    border-bottom: 1px dashed #ddd;
+    h2 {
+        margin: 5px 0;
+        font-size: 24px;
+        font-weight: normal;
+        font-family: 'Droid Sans', 'Helvetica Neue', Arial, Helvetica, "Microsoft yahei", sans-serif;
+        a {
+            color: #333;
+        }
+        a:hover {
+            color: #999282;
+        }
+    }
+    .post_cover {
+        float: left;
+        width: 200px;
+        max-height: 200px;
+        overflow: hidden;
+        margin: 5px 20px 0 0;
+        border: 3px solid #fff;
+
+		&:hover{
+			border: 3px solid #666;
+		}
+    }
+    .post_intro {
+        margin-top: 5px;
+        line-height: 1.8;
+    }
+
+    .post_metas {
+        color: #999;
+		font-size: 13px;
+		i{
+			font-size: 12px;
+			margin-right: 1px;
+		}
+        a {
+            color: #999;
+        }
+        span {
+            margin-right: 20px;
+        }
+        .count {
+            float: right;
+        }
+    }
+}
+
+
+
+
+
+.post {
+    padding-bottom: 20px;
+
+    h2 {
+        margin-top: 0;
+        font-family: 'Droid Sans', 'Helvetica Neue', Arial, Helvetica, "Microsoft yahei", sans-serif;
+    }
+    .post_metas {
+        color: #999;
+        a {
+            color: #999;
+        }
+        span {
+            margin-right: 20px;
+        }
+        .count {
+            float: right;
+        }
+    }
+
+    .entry {
+        margin-top: 30px;
+        line-height: 1.8;
+    }
+
+
+}
+
+
+
+// archive
+.archive {
+    padding: 0 100px 0 30px;
+    .list_years {
+        font-weight: bold;
+        line-height: 1.6em;
+        margin-top: 20px;
+        font-size: 1.2em;
+    }
+    .listing {
+        padding-left: 1em;
+    }
+    .listing_item {
+        padding: 3px 0;
+        span {
+            color: #999;
+        }
+        a {
+            margin-left: 1em;
+        }
+    }
+}
+
+
+
+
+    .recent_posts{
+        border-bottom: 1px dashed gainsboro;
+        li{
+            border-top: 1px dashed gainsboro;
+            line-height: 1.2;
+            padding: 0.75em 0;
+        }
+    }
+}
+
+
+
+.pager {
+	width: 90%;
+	margin: 30px auto 0 auto;
+    .next {
+        float: right;
+    }
+    .prev {
+        float: left;
+    }
+}
+
+
+
+
+#footer {
+	margin-top: 50px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+	text-align: center;
+	color: #999;
+    .copyright {
+        font-size: 11px;
+    }
+}
+
+
+.left_side{
+	padding-right: 50px;
+}
+
+
+/*<middle*/
+@media print, screen and (max-width: 48em) {
+	.left_side{
+		padding-right: 0;
+	}
+}
+/*small*/
+@media print, screen and (max-width: 35.5em) {
+
+}
